@@ -88,14 +88,19 @@ opacity: 0.3;
 /* scrollama */
 #scroll {
 	position: relative;
-	border-top: 1px dashed #000;
-	border-bottom: 1px dashed #000;
 }
 
 .footer{
 	text-align: center;
 	background-color: #5385c1;
 }
+.copyright {
+	text-align: center;
+		color: #bbb;
+		font-size: 0.8em;
+		margin: 0 0 2em 0;
+		padding: 0;
+	}
 
 .inner {
 		max-width: 75em;
@@ -163,17 +168,22 @@ opacity: 0.3;
 	font-size: 1.5rem;
 }
 
-.image.round img {
+.round img {
 			border-radius: 100%;
+			border: 1pt solid #ffffff;
 			height: 200px;
 			width: 200px;
 		}
 		/* Box */
 
 .box {
-				margin-bottom: 0.5em;
+float:left;
+border: 1pt solid #ffffff;
+				margin-left: 3em;
+				margin-right: 3em;
+				margin-bottom: 2em;
 				padding: 0.5em;
 			}
 			.arrange{
-				display: inline;
+				display: inline-block;
 			}

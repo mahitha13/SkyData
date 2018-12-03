@@ -23,144 +23,155 @@
 	<section id='intro'>
 		<div id="blogMargin">
 			<h3>The Idea</h3>
-			<p>Social media is a powerful platform to share opinions, ideas, experiences and information. The data collected from these platforms can give us useful insights. For our project we collected data from weather related tweets from users staying in New York (using hashtags).
-				The motive was to draw minor changes from this data on the lowest level which might not be captured by the weather department. Using this data we made weather visualizations for the city of New York</p>
-				<br>
-				<h3>The Process</h3>
-				<p>Data Collection</p>
-				<!--<img src='1.png'>-->
-				<p class='intro__dek'>
-					Start scrolling to view more
-				</p>
-			</div>
-		</section>
-		<section id='scroll'>
-			<!--  graphic container  -->
-			<div class='scroll__graphic'>
-				<!--   actual graphic/chart   -->
-				<div class='chart'>
-					<!--<div class="imgCont">0</div>-->
-					<img id='imgBox' style="max-height: 729px; max-width: 890px;">
-				</div>
-			</div>
+			<p>Social media is a powerful platform to share opinions, ideas, experiences and information. The data collected from these platforms can give us useful insights. For this article we collected data from weather related tweets from users located in New York. Using this data we made weather visualizations for the city of New York. The motive was to draw minor changes from this data on the lowest level which might not be captured by the weather department.</p>
+			<br>
+			<h3>The Process</h3>
+			<p style="font-weight: bold;">Data Collection</p>
+			<p>We created our dataset by collecting tweets with weather related hashtags for NYC. This was done manually since keyword scraping might have brought a lot of discrepencies. </p>
+			<p style="font-weight: bold;">Data Mapping</p>
+			<p>We analysed the tweets to derive a scale of temperature felt by the users ranging from "Very Hot" to "Very Cold". Each tweet was associated with a value from the scale.</p>
+			<p style="font-weight: bold;">Data Visualization</p>
+			<p>After curating the dataset we then created the visualizations for yearly tweets as well as a focused monthly visualization for October.</p>
+			<p>Scroll down to view our findings.</p>
+			<!--<img src='1.png'>-->
+			<br>
+			<p class='intro__dek'>
 
-			<!--  step/text container  -->
-			<div class='scroll__text'>
-				<div class='step' data-step='1'>
-					<p>We came up with this visualization</p>
-				</div>
-				<div class='step' data-step='2'>
-					<p>STEP 2</p>
-				</div>
-				<div class='step' data-step='3'>
-					<p>STEP 3</p>
-				</div>
-				<div class='step' data-step='4'>
-					<p>STEP 4</p>
-				</div>
+			</p>
+		</div>
+	</section>
+	<section id='scroll'>
+		<!--  graphic container  -->
+		<div class='scroll__graphic'>
+			<!--   actual graphic/chart   -->
+			<div class='chart'>
+				<!--<div class="imgCont">0</div>-->
+				<img id='imgBox' style="max-height: 729px; max-width: 890px;">
 			</div>
-		</section>
-		<section id="foot" class="footer">
-			<div class="inner">
-				<header>
-					<h2>The Authors</h2>
-				</header>
-<div class="arrange">
-					<div class="box person">
-						<div class="image round">
-							<img src="resources/Dhruvi_DP.jpg" alt="Person 1" />
-						</div>
-						<h4>Dhruvi Patel</h4>
-						<p>University of Maryland</p>
+		</div>
+
+		<!--  step/text container  -->
+		<div class='scroll__text'>
+			<div class='step' data-step='1'>
+				<p>We came up with this visualization</p>
+			</div>
+			<div class='step' data-step='2'>
+				<p>STEP 2</p>
+			</div>
+			<div class='step' data-step='3'>
+				<p>STEP 3</p>
+			</div>
+			<div class='step' data-step='4'>
+				<p>STEP 4</p>
+			</div>
+		</div>
+	</section>
+	<section id="foot" class="footer">
+		<div class="inner">
+			<header>
+				<h2>The Authors</h2>
+			</header>
+			<div class="arrange">
+				<div class="box">
+					<div class="round">
+						<img src="resources/Dhruvi_DP.jpg" alt="Person 1" />
 					</div>
-					<div class="box person">
-						<div class="image round">
-							<img src="resources/Mahitha_DP.JPG" alt="Person 2" />
-						</div>
-						<h4>Mahitha Kalyani</h4>
-						<p>University of Maryland</p>
+					<h4>Dhruvi Patel</h4>
+					<p>University of Maryland</p>
+				</div>
+
+				<div class="box">
+					<div class="round">
+						<img src="resources/Mahitha_DP.JPG" alt="Person 2" />
 					</div>
-</div>
+					<h4>Mahitha Kalyani</h4>
+					<p>University of Maryland</p>
+				</div>
+
 			</div>
-		</section>
-		<script>
-		var container = d3.select('#scroll');
-		var graphic = container.select('.scroll__graphic');
-		var chart = graphic.select('.chart');
-		var text = container.select('.scroll__text');
-		var step = text.selectAll('.step');
-		// initialize the scrollama
-		var scroller = scrollama();
-		var chartWidth;
-		//scroller.style.visibility='hidden';
-		// generic window resize listener event
-		function handleResize() {
-			// 1. update height of step elements
-			//var stepHeight = Math.floor(window.innerHeight * 0.75);
-			var stepHeight = Math.floor(window.innerHeight);
-			step.style('height', stepHeight + 'px');
-			// 2. update width/height of graphic element
-			var bodyWidth = d3.select('body').node().offsetWidth;
-			graphic
-			.style('width', bodyWidth + 'px')
-			.style('height', window.innerHeight + 'px');
-			var chartMargin = 32;
-			var textWidth = text.node().offsetWidth;
-			//var chartWidth = graphic.node().offsetWidth - textWidth - chartMargin;
-			chartWidth = graphic.node().offsetWidth - textWidth - chartMargin;
-			chart
-			.style('width', chartWidth + 'px')
-			//.style('height', Math.floor(window.innerHeight / 2) + 'px');
-			.style('height', Math.floor(window.innerHeight * 0.70) + 'px');
-			// 3. tell scrollama to update new element dimensions
-			scroller.resize();
+		</div>
+	</section>
+	<div class="copyright">
+		&copy; Dhruvi Patel. Mahitha Kalyani.  Design: <a href="https://templated.co">TEMPLATED</a>. Scroller: <a herf="https://github.com/russellgoldenberg/scrollama">Russell Goldenberg</a>. Banner Image: <a href="https://unsplash.com">Unsplash</a>.
+	</div>
+	<script>
+	var container = d3.select('#scroll');
+	var graphic = container.select('.scroll__graphic');
+	var chart = graphic.select('.chart');
+	var text = container.select('.scroll__text');
+	var step = text.selectAll('.step');
+	// initialize the scrollama
+	var scroller = scrollama();
+	var chartWidth;
+	//scroller.style.visibility='hidden';
+	// generic window resize listener event
+	function handleResize() {
+		// 1. update height of step elements
+		//var stepHeight = Math.floor(window.innerHeight * 0.75);
+		var stepHeight = Math.floor(window.innerHeight);
+		step.style('height', stepHeight + 'px');
+		// 2. update width/height of graphic element
+		var bodyWidth = d3.select('body').node().offsetWidth;
+		graphic
+		.style('width', bodyWidth + 'px')
+		.style('height', window.innerHeight + 'px');
+		var chartMargin = 32;
+		var textWidth = text.node().offsetWidth;
+		//var chartWidth = graphic.node().offsetWidth - textWidth - chartMargin;
+		chartWidth = graphic.node().offsetWidth - textWidth - chartMargin;
+		chart
+		.style('width', chartWidth + 'px')
+		//.style('height', Math.floor(window.innerHeight / 2) + 'px');
+		.style('height', Math.floor(window.innerHeight * 0.70) + 'px');
+		// 3. tell scrollama to update new element dimensions
+		scroller.resize();
 
-		}
-		// scrollama event handlers
-		function handleStepEnter(response) {
-			// response = { element, direction, index }
-			// add color to current step only
-			step.classed('is-active', function (d, i) {
-				return i === response.index;
-			})
-			// update graphic based on step
-			//chart.select('p').text(response.index + 1)
-			/*
-			var svg = d3.select('body').append('svg').attr({
-			width: 300,
-			height: 300,
-			border: '1px solid #ccc'
-		});
+	}
+	// scrollama event handlers
+	function handleStepEnter(response) {
+		// response = { element, direction, index }
+		// add color to current step only
+		step.classed('is-active', function (d, i) {
+			return i === response.index;
+		})
+		// update graphic based on step
+		//chart.select('p').text(response.index + 1)
+		/*
+		var svg = d3.select('body').append('svg').attr({
+		width: 300,
+		height: 300,
+		border: '1px solid #ccc'
+	});
 
-		svg.append('svg:image')
-		.attr({
-		'xlink:href': 'https://drive.google.com/file/d/1DphNXDPQ4g46aR3I1TzhxzwhP60TzXfP/view?usp=sharing',  // can also add svg file here
-		x: 0,
-		y: 0,
-		width: 128,
-		height: 128
-	})
-	*/
-	if(response.index==0){
-		document.getElementById('imgBox').src="resources/YF.png";
-		document.getElementById('imgBox').style.height='729px';
-		document.getElementById('imgBox').style.width=chartWidth;
-	}
-	if(response.index==1){
-		document.getElementById('imgBox').src="resources/OF_v2.png";
-		document.getElementById('imgBox').style.height='729px';
-		document.getElementById('imgBox').style.width=chartWidth;
-	}
-	if(response.index==2){
-		document.getElementById('imgBox').src="https://cloud.netlifyusercontent.com/assets/344dbf88-fdf9-42bb-adb4-46f01eedd629/242ce817-97a3-48fe-9acd-b1bf97930b01/09-posterization-opt.jpg";
-		document.getElementById('imgBox').style.height='729px';
-		document.getElementById('imgBox').style.width=chartWidth;
-	}
-	if(response.index==3){
-		document.getElementById('imgBox').src="https://cloud.netlifyusercontent.com/assets/344dbf88-fdf9-42bb-adb4-46f01eedd629/242ce817-97a3-48fe-9acd-b1bf97930b01/09-posterization-opt.jpg";
-		document.getElementById('imgBox').style.height='729px';
-		document.getElementById('imgBox').style.width=chartWidth;
-	}
+	svg.append('svg:image')
+	.attr({
+	'xlink:href': 'https://drive.google.com/file/d/1DphNXDPQ4g46aR3I1TzhxzwhP60TzXfP/view?usp=sharing',  // can also add svg file here
+	x: 0,
+	y: 0,
+	width: 128,
+	height: 128
+})
+*/
+if(response.index==0){
+	document.getElementById('imgBox').src="resources/YF.png";
+	document.getElementById('imgBox').style.height='729px';
+	document.getElementById('imgBox').style.width=chartWidth;
+}
+if(response.index==1){
+	document.getElementById('imgBox').src="resources/OF_v2.png";
+	document.getElementById('imgBox').style.height='729px';
+	document.getElementById('imgBox').style.width=chartWidth;
+}
+if(response.index==2){
+	document.getElementById('imgBox').src="resources/OF_v2.png";
+	document.getElementById('imgBox').style.height='729px';
+	document.getElementById('imgBox').style.width=chartWidth;
+}
+if(response.index==3){
+	document.getElementById('imgBox').src="resources/Compare.png";
+	document.getElementById('imgBox').style.height='729px';
+	document.getElementById('imgBox').style.width=chartWidth;
+}
 }
 function handleContainerEnter(response) {
 	// response = { direction }
