@@ -64,13 +64,13 @@
 		var step = text.selectAll('.step');
 		// initialize the scrollama
 		var scroller = scrollama();
-
+		var chartWidth;
 		//scroller.style.visibility='hidden';
 		// generic window resize listener event
 		function handleResize() {
 			// 1. update height of step elements
 			//var stepHeight = Math.floor(window.innerHeight * 0.75);
-			var stepHeight = Math.floor(window.innerHeight * 0.70);
+			var stepHeight = Math.floor(window.innerHeight * 0.50);
 			step.style('height', stepHeight + 'px');
 			// 2. update width/height of graphic element
 			var bodyWidth = d3.select('body').node().offsetWidth;
@@ -79,8 +79,8 @@
 				.style('height', window.innerHeight + 'px');
 			var chartMargin = 32;
 			var textWidth = text.node().offsetWidth;
-			var chartWidth = graphic.node().offsetWidth - textWidth - chartMargin;
-
+			//var chartWidth = graphic.node().offsetWidth - textWidth - chartMargin;
+			chartWidth = graphic.node().offsetWidth - textWidth - chartMargin;
 			chart
 				.style('width', chartWidth + 'px')
 				//.style('height', Math.floor(window.innerHeight / 2) + 'px');
@@ -117,22 +117,22 @@
 			if(response.index==0){
 				document.getElementById('imgBox').src="resources/YF.png";
 				document.getElementById('imgBox').style.height='729px';
-				document.getElementById('imgBox').style.width='890px';
+				document.getElementById('imgBox').style.width=chartWidth;
 			}
 			if(response.index==1){
 				document.getElementById('imgBox').src="resources/OF.png";
 				document.getElementById('imgBox').style.height='729px';
-				document.getElementById('imgBox').style.width='890px';
+				document.getElementById('imgBox').style.width=chartWidth;
 			}
 			if(response.index==2){
 				document.getElementById('imgBox').src="https://cloud.netlifyusercontent.com/assets/344dbf88-fdf9-42bb-adb4-46f01eedd629/242ce817-97a3-48fe-9acd-b1bf97930b01/09-posterization-opt.jpg";
 				document.getElementById('imgBox').style.height='729px';
-				document.getElementById('imgBox').style.width='890px';
+				document.getElementById('imgBox').style.width=chartWidth;
 			}
 			if(response.index==3){
 				document.getElementById('imgBox').src="https://cloud.netlifyusercontent.com/assets/344dbf88-fdf9-42bb-adb4-46f01eedd629/242ce817-97a3-48fe-9acd-b1bf97930b01/09-posterization-opt.jpg";
 				document.getElementById('imgBox').style.height='729px';
-				document.getElementById('imgBox').style.width='890px';
+				document.getElementById('imgBox').style.width=chartWidth;
 			}
 			}
 		function handleContainerEnter(response) {
