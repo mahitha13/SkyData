@@ -2,7 +2,10 @@
 <html>
 <head>
 	<title>Sky Data</title>
+	<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
     <script src="https://d3js.org/d3.v4.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Raleway" />
     <script src='https://unpkg.com/intersection-observer@0.5.0/intersection-observer.js'></script>
 	<script src='https://unpkg.com/scrollama'></script>
     <link rel="stylesheet" type="text/css" href="style.css">
@@ -10,11 +13,12 @@
 
 </head>
 <body>
-    <div>
-        <p class="heading1" style="text-align:center;margin-bottom:0px;">Sky Data</p>
-        <p class="heading2" style="text-align:center;margin-top:10px;">A visualisation of data on Social Media Perception of weather</p>
-    </div>
-
+	<section id="banner">
+    <!--<div class="sticky">-->
+        <h1>Sky Data</h1>
+        <p>A visualisation of data on Social Media Perception of weather</p>
+    <!--</div>-->
+	</section>
 
     <section id='intro'>
     	<div id="blogMargin">
@@ -32,7 +36,7 @@
 		<!--   actual graphic/chart   -->
 		<div class='chart'>
 			<!--<div class="imgCont">0</div>-->
-			<img id='imgBox' style="max-height: 395px; max-width: 890px;" src="https://images.pexels.com/photos/248797/pexels-photo-248797.jpeg?auto=compress&cs=tinysrgb&h=350">
+			<img id='imgBox' style="max-height: 729px; max-width: 890px;">
 		</div>
 	</div>
 
@@ -76,9 +80,11 @@
 			var chartMargin = 32;
 			var textWidth = text.node().offsetWidth;
 			var chartWidth = graphic.node().offsetWidth - textWidth - chartMargin;
+
 			chart
 				.style('width', chartWidth + 'px')
-				.style('height', Math.floor(window.innerHeight / 2) + 'px');
+				//.style('height', Math.floor(window.innerHeight / 2) + 'px');
+				.style('height', Math.floor(window.innerHeight * 0.70) + 'px');
 			// 3. tell scrollama to update new element dimensions
 			scroller.resize();
 
@@ -109,23 +115,23 @@
 			})
 */
 			if(response.index==0){
-				document.getElementById('imgBox').src="resources/1.png";
-				document.getElementById('imgBox').style.height='395px';
+				document.getElementById('imgBox').src="resources/YF.png";
+				document.getElementById('imgBox').style.height='729px';
 				document.getElementById('imgBox').style.width='890px';
 			}
 			if(response.index==1){
+				document.getElementById('imgBox').src="resources/OF.png";
+				document.getElementById('imgBox').style.height='729px';
+				document.getElementById('imgBox').style.width='890px';
+			}
+			if(response.index==2){
 				document.getElementById('imgBox').src="https://cloud.netlifyusercontent.com/assets/344dbf88-fdf9-42bb-adb4-46f01eedd629/242ce817-97a3-48fe-9acd-b1bf97930b01/09-posterization-opt.jpg";
-				document.getElementById('imgBox').style.height='395px';
+				document.getElementById('imgBox').style.height='729px';
 				document.getElementById('imgBox').style.width='890px';
 			}
 			if(response.index==3){
 				document.getElementById('imgBox').src="https://cloud.netlifyusercontent.com/assets/344dbf88-fdf9-42bb-adb4-46f01eedd629/242ce817-97a3-48fe-9acd-b1bf97930b01/09-posterization-opt.jpg";
-				document.getElementById('imgBox').style.height='395px';
-				document.getElementById('imgBox').style.width='890px';
-			}
-			if(response.index==4){
-				document.getElementById('imgBox').src="https://cloud.netlifyusercontent.com/assets/344dbf88-fdf9-42bb-adb4-46f01eedd629/242ce817-97a3-48fe-9acd-b1bf97930b01/09-posterization-opt.jpg";
-				document.getElementById('imgBox').style.height='395px';
+				document.getElementById('imgBox').style.height='729px';
 				document.getElementById('imgBox').style.width='890px';
 			}
 			}

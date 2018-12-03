@@ -1,16 +1,62 @@
-.heading1{
-	color: teal;
-	font-family: sans-serif;
-	font-size: 50px;
-}
+body, input, select, textarea {
+		color: #9a9a9a;
+		font-family: "Raleway", Arial, Helvetica, sans-serif;
+		font-size: 13pt;
+		font-weight: 300;
+		line-height: 1.65;
+	}
+/*
+div.sticky {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  padding: 5px;
+  background-color: #cae8ca;
+  border: 2px solid #4CAF50;
+	border-bottom: 1px solid grey;
+}*/
 
-.heading2{
-	color: teal;
-	font-family: sans-serif;
-	font-size: 20px;
-}
 #blogMargin{
 	margin: 20px;
+}
+
+#banner {
+		padding: 12em 0 10em 0;
+		background-image: url('../resources/banner.jpg');
+		background-size: cover;
+		background-position: top;
+		background-attachment: fixed;
+		background-repeat: no-repeat;
+		text-align: center;
+		border-top: 0.5em solid #5385c1;
+	}
+
+	#banner h1 {
+			font-size: 4em;
+			font-weight: 100;
+			color: #fff;
+			line-height: 1em;
+			margin: 0 0 0.5em 0;
+			padding: 0;
+		}
+
+		#banner p {
+			font-size: 1em;
+			color: rgba(255, 255, 255, 0.55);
+			margin-bottom: 1.75em;
+		}
+/*
+#imgContainer{
+	height: auto;
+	width: auto;
+}
+*/
+#imgBack{
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: -1;
+		opacity: 0.3;
 }
 
 /* scrollama */
@@ -24,7 +70,7 @@
 	top: 0;
 	left: 0;
 	bottom: auto;
-	background-color: #fff;
+	background-color: #ffffff;
 	-webkit-transform: translate3d(0, 0, 0);
 	-moz-transform: translate3d(0, 0, 0);
 	transform: translate3d(0, 0, 0);
@@ -39,25 +85,23 @@
 .chart {
 	position: absolute;
 	right: 1rem;
-	top: 50%;
-	-moz-transform: translateY(-50%);
-	-webkit-transform: translateY(-50%);
-	transform: translateY(-50%);
-	background-color: #ddd;
-	/*border: 1px solid #000;*/
+	top: 10%;
+	-moz-transform: translateY(-10%);
+	-webkit-transform: translateY(-10%);
+	transform: translateY(-10%);
+	/*background-color: #ddd;
+	border: 1px solid #000;*/
 }
-.chart p {
-	text-align: center;
+.chart img {
 	padding: 1rem;
 	position: absolute;
-	top: 50%;
-	left: 50%;
-	-moz-transform: translate(-50%, -50%);
-	-webkit-transform: translate(-50%, -50%);
-	transform: translate(-50%, -50%);
-	font-size: 8rem;
-	font-weight: 900;
-	color: #666;
+	top: 10%;
+	left: 10%;
+	-moz-transform: translate(-10%, -10%);
+	-webkit-transform: translate(-10%, -10%);
+	transform: translate(-10%, -10%);
+	height: 729px;
+	width: 890px;
 }
 .scroll__text {
 	position: relative;
@@ -67,11 +111,12 @@
 }
 .step {
 	margin: 2rem auto;
-	/*border: 1px solid #333;*/
 }
 .step.is-active {
-	/*background-color: lightgoldenrodyellow;*/
+	/*background-color: lightgoldenrodyellow;
 	background-color: #d3ede3;
+	background-color: #5385c1;*/
+	border: 1px solid #5385c1;
 }
 .step p {
 	text-align: center;
