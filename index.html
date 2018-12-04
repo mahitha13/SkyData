@@ -66,9 +66,16 @@
 				<p>This was weather feeling of twitter users for the month of October 2018 in NYC. There were small spurts of hikes or drops in temperature but it was a relatively pleasant month with temperatures matching the fall season vibes. </p>
 			</div>
 			<div class='step' data-step='3'>
-				<p>STEP 3</p>
+				<br>
+				<h3>Behind the Visualization</h3>
+				<p>Each tweet was manually coded for each value on our scale("Very Hot to Very Cold").Every individual code has an underlying temperature range which we determined from the recorded low and high temperature of NYC.</p>
 			</div>
 			<div class='step' data-step='4'>
+				<br>
+				<h3>Actual Weather Visualized</h3>
+				<p>We picked the official weather forecast dataset from NOAA and made a visualization of the predicted weather for the same year. As expected, there a notable difference between the two visualizations (Percieved and Actual). To confirm this observation, we went on to create a visualization for the avg. temperatures for these two categories.</p>
+			</div>
+			<div class='step' data-step='5'>
 				<br>
 				<h3>Actual vs Perceived Weather Visualized</h3>
 				<p>The weather as felt by the twitter users when compared with the actual weather forecast data shows a significant mismatch. However since the comparison is made on average estimates of twitter users' perception, some of the closely coupled debiations could be ignored. Apart from these, there are several deviations which are drastic enough to not be ignored.</p>
@@ -172,7 +179,7 @@ if(response.index==1){
 	document.getElementById('imgBox').style.width=chartWidth;
 }
 if(response.index==2){
-	document.getElementById('imgBox').src="resources/OF_v2.png";
+	document.getElementById('imgBox').src="resources/WeatherOctOverlay.png";
 	document.getElementById('imgBox').style.height='729px';
 	document.getElementById('imgBox').style.width=chartWidth;
 }
