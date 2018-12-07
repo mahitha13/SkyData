@@ -31,11 +31,11 @@
 			<p style="font-weight: bold;">Data Collection</p>
 			<p>We handpicked tweets for the past year (Nov, 2017 - Oct, 2018) for the city of New York using advanced Twitter filters. We used hashtags like #NYC, #weather, #<''month name''> and a few others. We also collected a detailed dataset for the month of October. The dataset had information like user name, date, tweet and the hashtags used. We got the original weather forecast dataset from National Center for Environmental Information.</p>
 			<br>
-			<p style="font-weight: bold;">Data Mapping</p>
-			<p>We analysed the tweets to derive a scale of temperature that was felt by the users during the year. We got values ranging from "Very Hot"(tempartures between 85-95 F) to "Very Cold"(35-44 F). Each tweet was qualitatively analysed before being associated with a value from the scale.</p>
+			<section id="data_mapping"><p style="font-weight: bold;">Data Mapping</p></section>
+			<p>We analysed the tweets to derive a scale of temperature that was felt by the users during the year. We got values ranging from <span id="temp">"Very Hot"(tempartures between 85-95 F) to "Very Cold"(35-44 F)</span>. Each tweet was qualitatively analysed before being associated with a value from the scale.</p>
 			<br>
 			<p style="font-weight: bold;">Data Visualization</p>
-			<p>After curating the dataset we then created the visualizations for yearly tweets as well as a focused monthly visualization for October. For our final visualization we used a radial chart to represent the yearly weather pattern derived from the datasetWe used the global color scale of temperature for easy understanding.
+			<p>After curating the dataset we then created the visualizations for yearly tweets as well as a focused monthly visualization for October. For our final visualization we used a radial chart to represent the yearly weather pattern derived from the dataset. We used the global color scale of temperature for easy understanding.
 				The radial chart also helps in showing cyclic weather patterns throughout the year. After making the individual visualizations for the actual and observed weather patterns, we made a simple line graph for the comparison of the two to get an overview of the discrepancies in the weather predictions by the meteorology department.</p>
 			<br>
 			<p style="color: #5385c1;">Scroll down to view our findings.</p>
@@ -60,8 +60,8 @@
 		<div class='scroll__text'>
 			<div class='step' data-step='1'>
 				<br>
-				<h3>The Year Visualized</h3>
-				<p>This was weather feeling of twitter users for the year Nov, 2017- Oct, 2018 in NYC. There are some interesting variations in temperature over the year where the weather was unexpectedly hot in the winter months and often time cold in the warmer seasons. </p>
+				<section id="perceived_viz"><h3>The Year Visualized</h3></section>
+				<p>This was weather feeling of twitter users for the year starting Nov, 2017 to Oct, 2018 in NYC. There are some interesting variations in temperature over the year where the weather was unexpectedly hot in the winter months and often times pleasant in the hot months.</p>
 			</div>
 			<div class='step' data-step='2'>
 				<br>
@@ -71,17 +71,17 @@
 			<div class='step' data-step='3'>
 				<br>
 				<h3>Behind the Visualization</h3>
-				<p>Each tweet was manually coded for each value on our scale("Very Hot to Very Cold").Every individual code has an underlying temperature range which we determined from the recorded low and high temperature of NYC.</p>
+				<p>Each tweet was qualitatively analysed and manually coded for each value on our scale("Very Hot to Very Cold"). Every individual code has an underlying temperature range which we determined from the recorded low and high temperature of NYC. Find this coding <a href="#data_mapping" onclick="document.getElementById('temp').style='background-color:lightgoldenrodyellow';setTimeout(highlight, 3000);">here</a>.</p>
 			</div>
 			<div class='step' data-step='4'>
 				<br>
-				<h3>Actual Weather Visualized</h3>
-				<p>We picked the official weather forecast dataset from NOAA and made a visualization of the predicted weather for the same year. As expected, there a notable difference between the two visualizations (Percieved and Actual). To confirm this observation, we went on to create a visualization for the average temperatures for these two categories.</p>
+				<section id="actual_viz"><h3>Actual Weather Visualized</h3></section>
+				<p>We picked the official weather forecast dataset from NOAA and made a visualization of the predicted weather for the same year. As expected, there is a notable difference between the two visualizations (Percieved and Actual).  In general, the spread of the cold weather is larger in the <a href="#perceived_viz">perceived visualization</a> as compared to the actual one.</p>
 			</div>
 			<div class='step' data-step='5'>
 				<br>
-				<h3>Actual vs Perceived Weather Visualized</h3>
-				<p>The weather as felt by the twitter users when compared with the actual weather forecast data shows a significant mismatch. However since the comparison is made on average estimates of twitter users' perception, some of the closely coupled deviations could be ignored. Apart from these, there are several deviations which are drastic enough to not be ignored.</p>
+				<h3>Actual vs Perceived Weather</h3>
+				<p> The visualization for the average temperatures(average of the min and max temp) of actual and perceived weather shows a significant mismatch. However since the comparison is made on average estimates of twitter users' perception, some of the closely coupled deviations could be ignored. Apart from these, there are several deviations which are drastic enough to not be ignored.</p>
 			</div>
 		</div>
 	</section>
@@ -229,6 +229,10 @@ function init() {
 	window.addEventListener('resize', handleResize);
 }
 // kick things off
+function highlight(){
+ document.getElementById("temp").style='background-color:white;';
+}
+
 init();
 </script>
 </body>

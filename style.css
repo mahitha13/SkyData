@@ -1,3 +1,7 @@
+a {
+	color: #5385c1;
+}
+
 body, input, select, textarea {
 	color: #9a9a9a;
 	font-family: "Raleway", Arial, Helvetica, sans-serif;
@@ -5,27 +9,28 @@ body, input, select, textarea {
 	font-weight: 300;
 	line-height: 1.65;
 }
-h2{
+h2 {
 	color: #ffffff;
 	font-family: "Raleway", Arial, Helvetica, sans-serif;
 	font-size: 20pt;
 	font-weight: 100;
 	line-height: 1.65;
 }
-h3{
+h3 {
 	color: #5385c1;
 	font-family: "Raleway", Arial, Helvetica, sans-serif;
 	font-size: 18pt;
 	font-weight: 100;
 	line-height: 1.65;
 }
-h4{
+h4 {
 	color: #ffffff;
 	font-family: "Raleway", Arial, Helvetica, sans-serif;
 	font-size: 16pt;
 	font-weight: 100;
 	line-height: 1.65;
 }
+
 /*
 div.sticky {
 position: -webkit-sticky;
@@ -73,21 +78,21 @@ border-bottom: 1px solid grey;
 
 #tweets{
 	/*display: block;
-  margin-left: auto;
-  margin-right: auto;*/
+	margin-left: auto;
+	margin-right: auto;*/
 	margin-left:1em;
 	margin-right:1em;
 	float: right;
-  width: 40%;
+	width: 40%;
 }
 #process{
 	/*display: block;
-  margin-left: auto;
-  margin-right: auto;*/
+	margin-left: auto;
+	margin-right: auto;*/
 	margin-left:1em;
 	margin-right:1em;
 	float: left;
-  width: 30%;
+	width: 30%;
 }
 /*
 #imgContainer{
@@ -109,13 +114,14 @@ opacity: 0.3;
 }
 
 .floaters{
-	float:left;
+	float:left;margin-top: 0;
 	margin-bottom: 2em;
 }
 
 .footer{
+	padding-top: 4em;
+	position: relative;
 	text-align: center;
-	background-color: #5385c1;
 }
 .copyright {
 	text-align: center;
@@ -126,7 +132,10 @@ opacity: 0.3;
 }
 
 .inner {
-	max-width: 75em;
+	background-color: #5385c1;
+	width:100%;
+	/*max-width: 75em;*/
+	padding-top: 0.5em;
 	margin: 0 auto;
 }
 
@@ -189,6 +198,14 @@ opacity: 0.3;
 
 	padding: 1rem;
 	font-size: 1.5rem;
+}
+.step h3 {
+	text-align: center;
+	padding-left: 1rem;
+	padding-right: 1rem;
+	padding-top: 2rem;
+	padding-bottom: 2rem;
+	font-size: 3rem;
 }
 
 .round img {
