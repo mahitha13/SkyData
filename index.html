@@ -23,17 +23,20 @@
 	<section id='intro'>
 		<div id="blogMargin">
 			<h3>The Idea</h3>
-			<p>Social media is a powerful platform to share opinions, ideas, experiences and information. The data collected from these platforms can give us useful insights. For this article we collected data from weather related tweets from users located in New York. Using this data we made weather visualizations for the city of New York. The motive was to draw minor deviations between the perceived and actual weather from this data on the lowest level which might not be captured by the weather department.</p>
-			<img id='tweets' src="resources/TweetsMontage.png">
+			<div class="floaters">
+				<p><img id='tweets' src="resources/TweetsMontage.png">Social media is a powerful platform to share opinions, ideas, experiences and information. The data collected from these platforms can give us useful insights. Geologists and climatologists are constantly observing and plotting patterns for changes in the Earth’s atmosphere. For this article we collected weather related tweets from users located in New York. Using this data we made weather visualizations for the past year for the city of New York. <br><br>The motive was to highlight minor deviations between the perceived and actual weather from this data on the lowest level which might not be captured by the weather department. The weather in New York is unpredictable enough to give us enough supporting evidence of this deviation in actual and perceived weather. We will discuss this further in the article.</p>
+			</div>
 			<h3>The Process</h3>
+			<img id='process' src="resources/flow1b.png">
 			<p style="font-weight: bold;">Data Collection</p>
-			<p>We created our dataset by collecting tweets with weather related hashtags for NYC. This was done manually since keyword scraping might have brought a lot of discrepancies. </p>
+			<p>We handpicked tweets for the past year (Nov, 2017 - Oct, 2018) for the city of New York using advanced Twitter filters. We used hashtags like #NYC, #weather, #<''month name''> and a few others. We also collected a detailed dataset for the month of October. The dataset had information like user name, date, tweet and the hashtags used. We got the original weather forecast dataset from National Center for Environmental Information.</p>
+			<br>
 			<p style="font-weight: bold;">Data Mapping</p>
-			<p>We analysed the tweets to derive a scale of temperature felt by the users ranging from "Very Hot" to "Very Cold". Each tweet was associated with a value from the scale.</p>
+			<p>We analysed the tweets to derive a scale of temperature that was felt by the users during the year. We got values ranging from "Very Hot"(tempartures between 85-95 F) to "Very Cold"(35-44 F). Each tweet was qualitatively analysed before being associated with a value from the scale.</p>
+			<br>
 			<p style="font-weight: bold;">Data Visualization</p>
-			<p>After curating the dataset we then created the visualizations for yearly tweets as well as a focused monthly visualization for October.</p>
-			<p style="font-weight: bold;">Actual Weather Vs Perceived Weather</p>
-			<p>We collected official weather data for the city of NYC. The comparison of the twitter perception and actual weather will give us an overview of the discrepancies in the weather predictions by the meteorology department.</p>
+			<p>After curating the dataset we then created the visualizations for yearly tweets as well as a focused monthly visualization for October. For our final visualization we used a radial chart to represent the yearly weather pattern derived from the datasetWe used the global color scale of temperature for easy understanding.
+				The radial chart also helps in showing cyclic weather patterns throughout the year. After making the individual visualizations for the actual and observed weather patterns, we made a simple line graph for the comparison of the two to get an overview of the discrepancies in the weather predictions by the meteorology department.</p>
 			<br>
 			<p style="color: #5385c1;">Scroll down to view our findings.</p>
 			<!--<img src='1.png'>-->

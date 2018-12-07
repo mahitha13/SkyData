@@ -72,10 +72,22 @@ border-bottom: 1px solid grey;
 }
 
 #tweets{
-	display: block;
+	/*display: block;
   margin-left: auto;
-  margin-right: auto;
-  width: 50%;
+  margin-right: auto;*/
+	margin-left:1em;
+	margin-right:1em;
+	float: right;
+  width: 40%;
+}
+#process{
+	/*display: block;
+  margin-left: auto;
+  margin-right: auto;*/
+	margin-left:1em;
+	margin-right:1em;
+	float: left;
+  width: 30%;
 }
 /*
 #imgContainer{
@@ -94,6 +106,11 @@ opacity: 0.3;
 /* scrollama */
 #scroll {
 	position: relative;
+}
+
+.floaters{
+	float:left;
+	margin-bottom: 2em;
 }
 
 .footer{
